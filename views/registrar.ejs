@@ -1,0 +1,27 @@
+<%- include('./header.ejs')%> <% if (registrado.length > 0) { %>
+<div class="alert alert-danger"><%= registrado %></div>
+<% } %> <% if (UserExist.length > 0) { %>
+<div class="alert alert-danger"><%= UserExist %></div>
+<% } %>
+<div class="card col-md-4 offset-md-4 mt-4">
+  <div class="card-header">
+    <h2>Registrar usuario!</h2>
+    <form style="height: 200px;" class="mb-3 flex-column d-flex justify-content-around" action="/registrar" method="post">
+      <input
+        name="username"
+        type="text"
+        placeholder="Elija un usuario"
+        required
+        class="form-control"
+      />
+      <input
+        name="password"
+        type="password"
+        placeholder="Elija una contraseña"
+        required
+        class="form-control"
+      />
+      <input class="btn btn-success" type="submit" value="Ingresar" />
+    </form>
+  </div>
+</div>

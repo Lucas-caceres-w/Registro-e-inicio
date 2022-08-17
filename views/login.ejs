@@ -1,0 +1,27 @@
+<%- include('./header.ejs')%> <% if (mensajeLogin.length > 0) { %>
+<div class="alert alert-danger"><%= mensajeLogin %></div>
+<% } %> <% if (loginPass.length > 0) { %>
+<div class="alert alert-danger"><%= loginPass %></div>
+<% } %>
+<div class="card col-md-4 offset-md-4 mt-4">
+  <div class="card-header">
+    <h2>Iniciar sesion</h2>
+    <form style="height: 200px;" class="mb-3 d-flex flex-column justify-content-around" action="/login" method="post">
+      <input
+        class="form-control p-2"
+        name="username"
+        type="text"
+        placeholder="Usuario"
+        required
+      />
+      <input
+        class="form-control p-2"
+        name="password"
+        type="password"
+        placeholder="Contraseña"
+        required
+      />
+      <input class="btn btn-success" type="submit" value="Ingresar" />
+    </form>
+  </div>
+</div>

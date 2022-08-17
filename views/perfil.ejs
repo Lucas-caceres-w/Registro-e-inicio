@@ -1,0 +1,7 @@
+<%- include('./navauth.ejs')%>
+<h1>Perfil de <%= user.username %></h1>
+    <div class="card">
+        <h4>Mi informacion</h4>
+        <p>Usuario: <%= user.username %> </p>
+        <p>Contraseña cifrada: <%= user.password %></p>
+    </div>
