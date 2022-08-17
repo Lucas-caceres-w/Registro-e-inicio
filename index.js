@@ -3,7 +3,7 @@ const express = require("express"),
   path = require("path"),
   engine = require("ejs-mate"),
   bodyParser = require("body-parser"),
-  port = process.env.PORT || 3000,
+  port = process.env.PORT || 5000,
   morgan = require("morgan"),
   session = require("express-session"),
   passport = require("passport"),
@@ -44,5 +44,4 @@ app.use(express.static(__dirname + "/public"));
 app.use("/", require("./routes/index"));
 //servidor
 app.listen(port, () => {
-  console.log(`Servidor Online en: http://localhost:${port}`);
-});
+  console.log(`Servidor Online en: http://localhost:${port}`);});
