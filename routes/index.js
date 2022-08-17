@@ -3,7 +3,7 @@ const express = require("express"),
   passport = require("passport");
 
 router.get("/", (req, res) => {
-  res.render("./layout/main");
+  res.render("layout/main");
 });
 router.get("/Home", Auth, (req, res) => {
   res.render("home");
